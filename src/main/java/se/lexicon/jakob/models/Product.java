@@ -15,9 +15,9 @@ public abstract class Product
     }
 
     public String showInfo()
-{
-    return ( "Product ID: [" + getId() + "] Product: " + getName() + " Price: " + getPrice());
-}
+    {
+        return ("[" + getId() + "] " + getName() + " Price:" + getPrice());
+    }
 
     public String consumeProduct()
     {

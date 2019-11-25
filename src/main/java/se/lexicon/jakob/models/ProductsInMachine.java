@@ -1,13 +1,10 @@
 package se.lexicon.jakob.models;
 
-import se.lexicon.jakob.interfaces.IScanner;
-
 import java.util.Arrays;
 
-public class PrintProducts
+public class ProductsInMachine
 {
-    private Candy candies;
-    public void productsInSlot()
+    public void currentProducts()
     {
         /**------------------Just to make it clean-----------*/
         Product[] drinks = {new Beverage(1, "Coca Cola", 15),
@@ -27,12 +24,14 @@ public class PrintProducts
         //Have to combine all the arrays to one to search for items
         Product[][] allProducts = new Product[][]{drinks, snacks, candy};
 
-        for (Product[] drink : allProducts)
+        for (Product[] all : allProducts)
         {
-            for(Product dranks : drink)
+            for (Product all2 : all)
             {
-                System.out.println(dranks.showInfo());
+                System.out.println(all2);
             }
         }
+
+        Arrays.toString(allProducts);
     }
 }
