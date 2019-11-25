@@ -4,20 +4,26 @@ import se.lexicon.jakob.interfaces.IVendingMachine;
 
 public class VendingMachine implements IVendingMachine
 {
+    /**--------------------Products in the machine----------------*/
     private Product[] allProducts = {
+            /*-----------Drinks in the machine------------*/
             new Beverage(1, "Coca Cola", 15),
             new Beverage(2, "Fanta", 15),
             new Beverage(3, "Sprite", 15),
             new Beverage(4, "Red Bull", 25),
+            /*-----------Snacks in the machine------------*/
             new Snacks(11, "Chips", 20),
             new Snacks(12, "Cheese Doodles", 20),
             new Snacks(13, "Pringles", 25),
+            /*-----------Candy in the machine-------------*/
             new Candy(21, "Snickers", 10),
             new Candy(22, "Twix", 10),
             new Candy(23, "Mars", 10),
+            /*-----------Fruit in the machine-------------*/
             new Fruit(31, "Apple", 8),
             new Fruit(32, "Banana", 8),
             new Fruit(33, "Orange", 8)};
+    /**-----------------------------------------------------------*/
 
     private int currentBalance;
 
@@ -39,7 +45,6 @@ public class VendingMachine implements IVendingMachine
         {
             System.out.println("Invalid Amount!");
         }
-        System.out.println(currentBalance);
     }
 
     @Override
