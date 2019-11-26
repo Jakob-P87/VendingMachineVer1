@@ -12,7 +12,8 @@ public class TestProduct
     @Before
     public void initProductInfo()
     {
-        drink = new Beverage(1,"Coca Cola", 15);
+        drink = new Beverage(1,"Coca Cola", 15,5);
+
     }
 
     @Test
@@ -21,23 +22,23 @@ public class TestProduct
         //Assert
         assertEquals(15, drink.getPrice());
         assertEquals("Coca Cola", drink.getName());
+        assertEquals(5,drink.getQuantity());
+        assertEquals(1, drink.getId());
     }
 
     @Test
-    public void testSetInfo()
+    public void testConsumeProduct()
     {
         //Act
-        drink.setPrice(18);
-        drink.setCalories(230);
+        drink.consumeProduct();
 
         //Assert
-        assertEquals(18, drink.getPrice());
-        assertEquals(230, drink.getCalories());
+        assertEquals(4, drink.getQuantity());
     }
 
     @Test
-    public void testSnacks()
+    public void testShowInfo()
     {
-        //Arrange
+        assertEquals(("[" + drink.getId() + "] " + drink.getName() + " Price:" + drink.getPrice()), drink.showInfo());
     }
 }
