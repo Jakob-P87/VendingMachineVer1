@@ -56,6 +56,7 @@ public class TestVendingMachine
     @Test
     public void testNoMoney()
     {
+        //Assert
         assertNull(machine.request(2));
     }
 
@@ -81,6 +82,7 @@ public class TestVendingMachine
     @Test
     public void testGetProductInfo()
     {
+        //Assert
         assertNotNull(machine.getDescription(4));
     }
 }

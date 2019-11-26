@@ -77,16 +77,17 @@ public class VendingMachine implements IVendingMachine
     @Override
     public String getDescription(int productNumber)
     {
-        String productInfo = null;
+        String productInfo;
 
         for (int i = 0; i < allProducts.length; i++)
         {
             if (allProducts[i].getId() == productNumber)
             {
                 productInfo = allProducts[i].showInfo();
+                return productInfo;
             }
         }
-        return productInfo;
+        return null;
     }
 
     @Override

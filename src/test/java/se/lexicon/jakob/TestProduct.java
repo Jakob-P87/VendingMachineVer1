@@ -39,6 +39,7 @@ public class TestProduct
     @Test
     public void testShowInfo()
     {
+        //Assert
         assertEquals(("[" + drink.getId() + "] " + drink.getName() + " Price:" + drink.getPrice()), drink.showInfo());
     }
 }
